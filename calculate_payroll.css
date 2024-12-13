@@ -1,0 +1,96 @@
+
+body {
+    background: #0d0d0d;
+    color: #00ff00;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+h2.container {
+    color: #00ff00;
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+form {
+    background: #0d0d0d;
+    border-radius: 10px;
+    padding: 20px;
+    width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+}
+
+label {
+    color: #00ff00;
+    font-size: 1.2em;
+}
+
+input[type="text"] {
+    width: 50%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #00ff00;
+    border-radius: 8px;
+    background-color: #1a1a1a;
+    color: #00ff00;
+    font-size: 1em;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+}
+
+input[type="text"]:focus {
+    border-color: #00ff99;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #00ff00;
+    border: none;
+    border-radius: 8px;
+    color: #0d0d0d;
+    font-size: 1.2em;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button[type="submit"]:hover {
+    background-color: #00cc00;
+}
+
+.message, .error {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-top: 10px;
+}
+
+.message {
+    color: #00ff00;
+}
+
+.error {
+    color: #ff0033;
+}
+
+a {
+    color: #00ff00;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    margin-top: 20px;
+}
+
+a:hover {
+    color: #00cc00;
+    text-decoration: underline;
+}

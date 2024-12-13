@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.table-background {
+    background-color: rgba(20, 20, 20, 0.9);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    width: 100%;
+    max-width: 1300px;
+    overflow-x: auto;
+}
+
+h2 {
+    color: #00ff00;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.top-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.add-employee-btn {
+    padding: 10px 15px;
+    background-color: #00ff00;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #0d0d0d;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.add-employee-btn:hover {
+    background-color: #009900;
+    transform: translateY(-2px);
+}
+
+.search-bar {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 300px;
+    margin-right: 10px;
+}
+
+.search-btn {
+    padding: 10px 15px;
+    background-color: #00ff00;
+    border: none;
+    border-radius: 5px;
+    color: #0d0d0d;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.search-btn:hover {
+    background-color: #009900;
+    transform: translateY(-2px);
+}
+
+form {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.table-header {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px; 
+}
+
+.table-header th {
+    padding: 12px 25px;
+    text-align: center;
+    border-bottom: 1px solid #555;
+    background-color: #005600;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.worksheet-table-container {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-top: 10px;
+}
+
+.worksheet-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.worksheet-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #555;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 200px;
+}
+
+.worksheet-table td a {
+    color: #00ff00;
+    text-decoration: none;
+}
+
+.worksheet-table td a:hover {
+    text-decoration: underline;
+}
+
+.worksheet-table tr:hover {
+    background-color: rgba(0, 255, 0, 0.1);
+}
+
+.back-to-payroll-btn {
+    padding: 10px 15px;
+    background-color: #00ff00;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #0d0d0d;
+    display: inline-block;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 20px;
+}
+
+.back-to-payroll-btn:hover {
+    background-color: #009900;
+    transform: translateY(-2px);
+}
+

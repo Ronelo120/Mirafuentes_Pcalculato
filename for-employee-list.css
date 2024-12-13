@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    background-color: #0d0d0d;
+    color: #00ff00;
+    overflow: hidden;
+}
+
+.container {
+    width: 400px;
+    padding: 30px;
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+    align-items: center;
+}
+
+h2 {
+    margin-bottom: 10px;
+    font-size: 28px;
+    text-align: center;
+    color: #00ff00;
+}
+
+.message, .error {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    text-align: center;
+}
+
+.message {
+    background-color: #3c763d;
+}
+
+.error {
+    background-color: #a94442;
+}
+
+.matrix-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    width: 100%; /* Ensures form spans the container width */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #00ff00;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    padding: 10px;
+    border: 1px solid #00ff00;
+    border-radius: 5px;
+    background-color: #0d0d0d;
+    color: #00ff00;
+    font-size: 16px;
+    width: calc(100% - 22px);
+    transition: all 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus {
+    border-color: #00b300;
+    outline: none;
+    background-color: #1a1a1a;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    grid-column: span 2;
+    width: 100%;
+}
+
+button {
+    padding: 12px;
+    background-color: #00b300;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 48%;
+}
+
+button:hover {
+    background-color: #007a00;
+}
+
+.back-to-employee-list {
+    background-color: #00b300;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 12px;
+    margin-top: 20px;
+    color: #00ff00;
+    text-decoration: none;
+}
+
+.back-to-employee-list:hover {
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .matrix-form {
+        grid-template-columns: 1fr;
+    }
+
+    button {
+        width: 100%;
+    }
+}

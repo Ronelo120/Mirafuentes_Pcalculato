@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0d0d0d;
+    color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-size: cover;
+}
+
+.wrapper {
+    background-color: rgba(20, 20, 20, 0.9);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    text-align: center;
+    width: 400px;
+}
+
+h2 {
+    color: #00ff00;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    margin-bottom: 20px;
+}
+
+p {
+    color: #f0f0f0;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #00ff00;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px solid #00ff00;
+    border-radius: 5px;
+    color: #f0f0f0;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #008000;
+    outline: none;
+}
+
+.invalid-feedback {
+    color: #ff4c4c;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* Button Styles */
+.btn-primary {
+    width: 100%;
+    padding: 12px;
+    background-color: #00ff00;
+    border: none;
+    border-radius: 5px;
+    color: #0d0d0d;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.btn-primary:hover {
+    background-color: #009900; /* Darker green for hover */
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    width: 100%;
+    padding: 12px;
+    background-color: #505050;
+    border: none;
+    border-radius: 5px;
+    color: #f0f0f0;
+    margin-top: 10px; /* Margin to separate from submit button */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #404040;
+    transform: translateY(-2px);
+}
+
+a {
+    color: #00ff00;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #008000;
+}
+
+/* Centering the wrapper */
+html, body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Responsive Styles */
+@media (max-width: 480px) {
+    .wrapper {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .btn-primary {
+        font-size: 14px;
+    }
+}
