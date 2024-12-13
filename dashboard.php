@@ -4,7 +4,7 @@ session_start();
 
 
 if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
-    header("location: login.php");
+    header("location: index.php");
     exit;
 }
 
@@ -24,7 +24,7 @@ $totalEmployees = $rowTotalEmployees['total'];
 <head>
     <meta charset="UTF-8">
     <title>Admin Dashboard</title>
-    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="css/dashboard.css">
 </head>
 <body>
     <div class="container">

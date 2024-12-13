@@ -47,7 +47,7 @@ if (isset($_GET['delete_id'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Employee List</title>
-    <link rel="stylesheet" href="employee-list.css"> 
+    <link rel="stylesheet" href="css/employee-list.css"> 
 </head>
 <body>
 <div class="table-background">

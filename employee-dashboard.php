@@ -55,7 +55,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Employee Dashboard</title>
-    <link rel="stylesheet" href="employee-dashboard.css">
+    <link rel="stylesheet" href="css/employee-dashboard.css">
 
 </head>
 <body>

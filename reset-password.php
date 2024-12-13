@@ -4,7 +4,7 @@ session_start();
  
 
 if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
-    header("location: login.php");
+    header("location: index.php");
     exit;
 }
  
@@ -47,7 +47,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             if(mysqli_stmt_execute($stmt)){
     
                 session_destroy();
-                header("location: login.php");
+                header("location: index.php");
                 exit();
             } else{
                 echo "Oops! Something went wrong. Please try again later.";
@@ -67,7 +67,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     <meta charset="UTF-8">
     <title>Reset Password</title>
-    <link rel="stylesheet" href="reset-password.css">
+    <link rel="stylesheet" href="css/reset-password.css">
 
 </head>
 <body>

@@ -15,7 +15,7 @@ $results = $_SESSION['payroll_results'];
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payroll Results</title>
-    <link rel="stylesheet" href="payroll_results.css"> 
+    <link rel="stylesheet" href="css/payroll_results.css"> 
 </head>
 <body>
     <div class="mate-background">

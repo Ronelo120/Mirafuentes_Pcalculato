@@ -117,7 +117,7 @@ $positions = [
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add New Employee</title>
-    <link rel="stylesheet" href="for-employee-list.css">
+    <link rel="stylesheet" href="css/for-employee-list.css">
 </head>
 <body>
     <h2 class="container">Add New Employee</h2>
