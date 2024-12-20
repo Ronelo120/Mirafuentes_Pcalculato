@@ -2,7 +2,6 @@
 
 include 'config.php';
 
-
 $employee_id = '';
 $employee = null;
 $deductions = [];
@@ -38,7 +37,6 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
             'Total Deductions' => $sss + $philhealth + $pagibig + $tax + $deduction_for_absences
         ];
 
-
         $total_deductions = array_sum($deductions);
         $net_pay = $basic_salary - $total_deductions;
     } else {
@@ -56,7 +54,27 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Employee Dashboard</title>
     <link rel="stylesheet" href="css/employee-dashboard.css">
+    <style>
+        .print-btn {
+            margin-top: 20px;
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .print-btn:hover {
+            background-color: #0056b3;
+        }
 
+        @media print {
+            .back-btn, .print-btn {
+                display: none;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="dashboard">
@@ -64,9 +82,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
 
         <?php if ($error): ?>
             <p class="error"><?php echo $error; ?></p>
-        <?php endif; ?>
-
-        <?php if ($employee): ?>
+        <?php else: ?>
             <h3><?php echo htmlspecialchars($employee['name']); ?> (ID: <?php echo htmlspecialchars($employee['id']); ?>)</h3>
             <p>Position: <?php echo htmlspecialchars($employee['position']); ?></p>
             <p>Basic Salary: ₱<?php echo number_format($employee['basic_salary'], 2); ?></p>
@@ -78,10 +94,16 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                     <p><?php echo htmlspecialchars($key); ?>: ₱<?php echo number_format($value, 2); ?></p>
                 <?php endforeach; ?>
                 <p><strong>Total Deductions: ₱<?php echo number_format($deductions['Total Deductions'], 2); ?></strong></p>
-                <p><strong>Net Pay: ₱<?php echo number_format($net_pay, 2); ?></strong></p> <!-- Display Net Pay -->
+                <p><strong>Net Pay: ₱<?php echo number_format(num: $net_pay); ?></strong></p>
             </div>
 
+            <!-- Back Button -->
             <a href="employee-list.php" class="back-btn">Back to Employee List</a>
+
+            <!-- Print Button -->
+            <form method="post">
+                <button type="button" class="print-btn" onclick="window.print()">Print Details</button>
+            </form>
         <?php endif; ?>
     </div>
 </body>
